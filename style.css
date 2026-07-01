@@ -1,0 +1,112 @@
+/* 1. Reset default spacing so everything behaves nicely */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Main Page Setup */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f6c1f0, #fcf9fc);
+    font-family: Arial, sans-serif;
+    color: #f183c5;            
+    text-align: center;
+    padding: 20px;
+}
+
+/* 3. Text Styling \ */
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#time {
+    font-size: 2rem;
+    color: #b35fa1;           
+    margin-bottom: 20px;
+}
+
+/* 4. Button Designs */
+button, .btn {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background-color: #f183c5; 
+    text-decoration: none;     
+    transition: background 0.3s ease;
+}
+
+.btn {
+    margin-top: 20px;
+    font-size: 1.2rem;         
+}
+
+/* Combines the hover style for BOTH kinds of buttons */
+button:hover, .btn:hover {
+    background-color: #e26fb2; 
+}
+
+/* Box container that forces the game buttons side-by-side */
+.button-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* 5. The Cards Container Grid */
+#theCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;                             
+    margin-top: 25px;
+    max-width: 660px;                      
+}
+
+/* 6. Individual Card Images */
+.Card {
+    height: 140px;
+    width: 140px;
+    border-radius: 12px;                  
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1); 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.Card:hover {
+    transform: scale(1.05);              
+}
+
+/* 7. Win Page Container & Heading */
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgb(238, 167, 215);
+    animation: pop 1s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
